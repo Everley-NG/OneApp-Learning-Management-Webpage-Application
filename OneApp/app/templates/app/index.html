@@ -1,0 +1,99 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+        <div class="text-center py-5 px-3">
+            <h1><b>Courses</b></h1>
+
+      
+        </div>
+    <div class="py-3 px-3">
+
+        
+        <div class="card text-center">
+  <div class="card-header">
+    CP317
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Introduction to Software Engineering</h5>
+    <p class="card-text">Discussion of software development activities, including software process models, analysis, design, implementation, testing, project management and advanced topics. Both traditional and object-oriented methods are considered.</p>
+    <a href="/classes" class="btn btn-secondary">View Class</a>
+  </div>
+  <div class="card-footer text-muted">
+    Winter 2021
+  </div>
+</div>
+        
+
+    </div>
+
+
+
+
+
+          
+{% else %}
+
+<div class="text-center">
+      <div class="jumbotron jumbotron-fluid bg-light">
+  <div class="container">
+    <h1 class="display-1">OneApp</h1>
+    <p class="lead">OneApp is a platform for Wilfred Laurier University Students to help each other and share information.</p>
+      
+       
+    
+  </div>
+</div>
+
+
+</div>
+<div class="py-1 px-3">
+     
+<div class="row">
+    <div class="col-sm-4">
+         <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Group Chats</h5>
+        <p class="card-text">Join dedicated group chats for the classes you are taking!.</p>
+        
+      </div>
+    </div>
+       
+    </div>
+    <div class="col-sm-4">
+              <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Resource Pages</h5>
+        <p class="card-text">Share and view resources specific to the topics covered in your classes.</p>
+        
+      </div>
+    </div>
+       
+
+    </div>
+    <div class="col-sm-4">
+                <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Question Boards</h5>
+        <p class="card-text">Ask and answer questions about deadlines, projects, tests, and much more!</p>
+        
+      </div>
+    </div>
+        
+
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+
+{% endif %}
+
+
+{% endblock %}

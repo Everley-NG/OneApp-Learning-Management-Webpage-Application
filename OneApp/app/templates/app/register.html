@@ -1,0 +1,71 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="py-5 px-3 text-center">
+    <h3>Create account</h3>
+    <b>Create your account with your mylaurier.ca email address.</b>
+     <div class="py-5 px-3">
+         {%if error%}
+           <span class="alert alert-dark">{{error}}</span>
+        {%endif%}
+     </div>
+</div>
+
+<div class="py-1 px-3">
+    <div class="row">
+    <div class="col-sm-4">
+
+    </div>
+    <div class="col-sm-8">
+
+        <form method="POST" class="form-group">
+            {% csrf_token %}
+           
+            
+                <b>User Name:</b>
+            <br />
+             <span class="" tabindex="0" data-toggle="tooltip" title="Required. 25 characters or fewer. Letters, digits and @/./+/-/_ only. ">
+            {{form.username}}
+             </span>
+            <br />
+            <b>Email:</b>
+            <br />
+            <span class="" tabindex="0" data-toggle="tooltip" title="example@mylaurier.ca">
+            {{form.email}}
+            </span>
+            <br />
+            <b>Password:</b>
+            <br />
+            <span class="" tabindex="0" data-toggle="tooltip" title="Your password can't be too similar to your other personal information.
+Your password must contain at least 8 characters.
+Your password can't be a commonly used password.
+Your password can't be entirely numeric.">
+            {{form.password1}}
+            </span>
+            <br />
+            <b>Confirm Password:</b>
+            <br />
+            <span class="" tabindex="0" data-toggle="tooltip" title="Enter the same password as before, for verification">  
+            {{form.password2}}
+            </span>
+            <br />
+            <div class="row py-4">
+                <div class="col-sm-1">
+
+                </div>
+              <div class="col-sm-8">
+                    <button type="submit" class="btn btn-lg btn-block btn-outline-dark">Confirm Registeration</button>
+                </div>
+               
+            </div>
+         
+        </form>
+    </div>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

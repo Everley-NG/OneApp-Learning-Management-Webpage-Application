@@ -1,0 +1,69 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="py-5 px-3 text-center">
+    <div class="row">
+        <div class="col-sm-3">
+
+        </div>
+         <div class="col-sm-5">
+              
+             <h2>&nbsp; Welcome Back!</h2>
+             <b>&nbsp; Please Log in</b>
+        
+        </div>
+    </div>
+     
+</div>
+
+<div class="py-3 px-3">
+   
+    <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-8">
+         
+        <section id="loginForm">
+            <form action="." method="post" class="form-horizontal">
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <label for="id_username" class="col-md-2 control-label">User name:</label>
+                    <div class="col-sm-5">
+                        {{ form.username }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="id_password" class="col-md-2 control-label">Password:</label>
+                    <div class="col-sm-5">
+                        {{ form.password }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input type="hidden" name="next" value="/" />
+                        <br />
+                        <input type="submit" value="Log in" class="btn btn-outline-secondary" />
+                    </div>
+                </div>
+                {% if form.errors %}
+                <p class="validation-summary-errors">Please enter a correct user name and password.</p>
+                {% endif %}
+            </form>
+        </section>
+    </div>
+    
+</div>
+</div>
+
+
+
+{% endblock %}
+
+
+{% block scripts %}
+
+    {% load staticfiles %}
+<script src="{% static 'app/scripts/jquery.validate.min.js' %}"></script>
+
+{% endblock %}

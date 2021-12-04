@@ -1,0 +1,111 @@
+/* custom css elements */
+
+/* html */
+body {
+    padding-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #3d168b !important;
+}
+
+a {
+    cursor: pointer;
+}
+
+nav li a {
+    color: azure !important;
+
+}
+
+    nav li a:hover {
+        color: #f2a900 !important;
+    }
+
+li a {
+    color: #3d168b;
+    text-decoration: none;
+}
+
+    li a:hover {
+        color: #f2a900;
+    }
+
+
+    li a::selection {
+        color: #f2a900;
+    }
+
+ul {
+    list-style-type: none;
+}
+
+/* classes */
+#idchat{
+    width: 100%;
+}
+
+.em-fa-icon {
+    color: #f2a900;
+    margin-right: 5px;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+/* end */
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+   width: 50%;
+ 
+}
+
+/* styles for validation helpers */
+
+.bg-dark {
+    background-color: #3d168b !important;
+}
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
